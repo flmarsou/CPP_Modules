@@ -6,12 +6,11 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 10:03:30 by flmarsou          #+#    #+#             */
-/*   Updated: 2024/12/24 11:22:55 by flmarsou         ###   ########.fr       */
+/*   Updated: 2024/12/27 12:59:45 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>	// cout, endl
-#include <cctype>	// toupper
+#include <iostream>
 
 int	main(int argc, char **argv)
 {
@@ -20,13 +19,14 @@ int	main(int argc, char **argv)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 		return (0);
 	}
+
+	std::string TextToPrint;
 	for (int y = 1; y < argc; y++)
-	{
-		for (int x = 0; argv[y][x]; x++)
-		{
-			std::cout << (char)std::toupper(argv[y][x]);
-		}
-	}
-	std::cout << std::endl;
+		TextToPrint = TextToPrint + argv[y];
+	for (size_t x = 0; x < TextToPrint.size(); x++)
+		TextToPrint[x] = std::toupper(TextToPrint[x]);
+
+	std::cout << TextToPrint << std::endl;
+
 	return (0);
 }
