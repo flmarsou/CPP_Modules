@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 12:53:11 by flmarsou          #+#    #+#             */
-/*   Updated: 2024/12/27 15:20:32 by flmarsou         ###   ########.fr       */
+/*   Updated: 2024/12/31 13:17:24 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@ int	main(void)
 	PhoneBook	phoneBook;
 	std::string command;
 
-	std::cout << "Welcome to the Awesome PhoneBook!\n" << std::endl;
+	std::cout << "Welcome to the Awesome PhoneBook!\n\n";
 
 	while (true)
 	{
-		std::cout << "Enter a command (ADD, SEARCH, EXIT): ";
+		std::cout << "\nEnter a command (ADD, SEARCH, EXIT): ";
 		if (!std::getline(std::cin, command))
 		{
-			std::cout << "\nTerminated..." << std::endl;
+			std::cout << "\nTerminated...\n";
 			break ;
 		}
 		if (command == "ADD")
 		{
 			if (!phoneBook.addContact())
 			{
-				std::cout << "\nTerminated..." << std::endl;
+				std::cout << "\nTerminated...\n";
 				break ;
 			}
 		}
@@ -39,17 +39,17 @@ int	main(void)
 		{
 			if (!phoneBook.searchContact())
 			{
-				std::cout << "\nTerminated..." << std::endl;
+				std::cout << "\nTerminated...\n";
 				break ;
 			}
 		}
 		else if (command == "EXIT")
 		{
-			std::cout << "Exiting..." << std::endl;
+			std::cout << "Exiting...\n";
 			break ;
 		}
 		else
-			std::cout << "Command not found!\n" << std::endl;
+			std::cout << "Command not found!\n";
 	}
 	return (0);
 }
