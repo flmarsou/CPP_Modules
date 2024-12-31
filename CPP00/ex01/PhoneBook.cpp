@@ -6,19 +6,24 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 13:56:45 by flmarsou          #+#    #+#             */
-/*   Updated: 2024/12/27 15:38:50 by flmarsou         ###   ########.fr       */
+/*   Updated: 2024/12/31 15:06:50 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include "Contact.hpp"
+
+PhoneBook::PhoneBook()
+{
+	_index = 0;
+	_nbr_of_contacts = 0;
+}
 
 bool	PhoneBook::addContact()
 {
 	std::string firstName, lastName, nickname, phoneNumber, darkestSecret;
 
 	// First Name
-	std::cout << "Enter " << ITALIC << "First Name" << RESET << ": ";
+	std::cout << "\nEnter " << ITALIC << "First Name" << RESET << ": ";
 	while (true)
 	{
 		if (!std::getline(std::cin, firstName))
@@ -87,15 +92,40 @@ bool	PhoneBook::addContact()
 		break ;
 	}
 
-	std::cout << GREEN << "Contact \"" + nickname + "\" Successfully Added!" << RESET << std::endl;
+	// Set Contact Variables
+	_contacts[_index].setFirstName(firstName);
+	_contacts[_index].setLastName(lastName);
+	_contacts[_index].setNickname(nickname);
+	_contacts[_index].setPhoneNumber(phoneNumber);
+	_contacts[_index].setDarkestSecret(darkestSecret);
+	std::cout << GREEN "Contact[" << _index << "] \"" << nickname << "\" Successfully Added!\n" RESET;
+
+	if (_index == 7)
+		_index = 0;
+	else
+		_index++;
+	if (_nbr_of_contacts < 8)
+		_nbr_of_contacts++;
 
 	return (true);
 }
 
 bool	PhoneBook::searchContact()
 {
-	std::cout << "| Index    | First    | Last     | Nick     |" << std::endl;
-	// TODO: Complete the list of all Contacts
-	// TODO: std::cin the index for detailed description of the Contact.
+	std::cout << "\n|    ID    | Forename | Lastname | Nickname |\n";
+	for (unsigned int i = 0; i < _nbr_of_contacts; i++)
+		_contacts[i].printSearch(i);
+
+	std::cout << "Enter an ID: ";
+	while (true)
+	{
+		/**
+		 * TODO:
+		 * - Get ID input
+		 * - Check if input is a single digit between 0-7 and <= to _nbr_of_contacts
+		 * - Print the contact
+		 */
+		break ;
+	}
 	return (true);
 }
