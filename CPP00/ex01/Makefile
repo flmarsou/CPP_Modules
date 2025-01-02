@@ -6,7 +6,7 @@
 #    By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/27 12:42:34 by flmarsou          #+#    #+#              #
-#    Updated: 2024/12/27 12:52:55 by flmarsou         ###   ########.fr        #
+#    Updated: 2025/01/02 14:30:55 by flmarsou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,6 @@ ${EXE}		:	${SRC}
 clean		:
 				rm -rf ${EXE}
 
-re			:	fclean all
+re			:	clean all
 
-.PHONY		:	all clean fclean re
+.PHONY		:	all clean re

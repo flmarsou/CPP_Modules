@@ -6,12 +6,12 @@
 #    By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/02 09:46:23 by flmarsou          #+#    #+#              #
-#    Updated: 2025/01/02 09:48:23 by flmarsou         ###   ########.fr        #
+#    Updated: 2025/01/02 14:30:32 by flmarsou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Program Executable
-EXE			:=	a.out
+EXE			:=	account
 
 # Files
 SRC			:=	tests.cpp Account.cpp
@@ -29,6 +29,6 @@ ${EXE}		:	${SRC}
 clean		:
 				rm -rf ${EXE}
 
-re			:	fclean all
+re			:	clean all
 
-.PHONY		:	all clean fclean re
+.PHONY		:	all clean re
