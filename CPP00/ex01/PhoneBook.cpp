@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 13:56:45 by flmarsou          #+#    #+#             */
-/*   Updated: 2024/12/31 15:06:50 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/02 09:19:33 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,19 +112,50 @@ bool	PhoneBook::addContact()
 
 bool	PhoneBook::searchContact()
 {
-	std::cout << "\n|    ID    | Forename | Lastname | Nickname |\n";
+	std::string		inputDigit;
+	unsigned int	digit;
+
+	if (_nbr_of_contacts == 0)
+	{
+		std::cout << "\nNo Contact Found!\n";
+		return (true);
+	}
+
+	std::cout << "\n╔══════════╦══════════╦══════════╦══════════╗\n";
+	std::cout << "║    ID    ║ Forename ║ Lastname ║ Nickname ║\n";
+	std::cout << "╠══════════╬══════════╬══════════╬══════════╣\n";
 	for (unsigned int i = 0; i < _nbr_of_contacts; i++)
 		_contacts[i].printSearch(i);
+	std::cout << "\n╚══════════╩══════════╩══════════╩══════════╝\n";
 
 	std::cout << "Enter an ID: ";
 	while (true)
 	{
-		/**
-		 * TODO:
-		 * - Get ID input
-		 * - Check if input is a single digit between 0-7 and <= to _nbr_of_contacts
-		 * - Print the contact
-		 */
+		if (!std::getline(std::cin, inputDigit))
+			return (false);
+		if (inputDigit.empty())
+		{
+			std::cout << "ID is empty, try again: ";
+			continue ;
+		}
+		if (inputDigit.length() > 1)
+		{
+			std::cout << "ID needs to be one character , try again: ";
+			continue ;
+		}
+		if (!isdigit(inputDigit[0]))
+		{
+			std::cout << "ID needs to be a digit, try again: ";
+			continue ;
+		}
+		digit = inputDigit[0] - '0';
+		if (digit >= _nbr_of_contacts)
+		{
+			std::cout << "ID not found, try again: ";
+			continue ;
+		}
+		std::cout << "\n";
+		_contacts[digit].printContact();
 		break ;
 	}
 	return (true);
