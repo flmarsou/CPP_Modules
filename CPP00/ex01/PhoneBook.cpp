@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 13:56:45 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/02 09:19:33 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/02 13:29:25 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,7 @@ bool	PhoneBook::searchContact()
 	std::cout << "╠══════════╬══════════╬══════════╬══════════╣\n";
 	for (unsigned int i = 0; i < _nbr_of_contacts; i++)
 		_contacts[i].printSearch(i);
-	std::cout << "\n╚══════════╩══════════╩══════════╩══════════╝\n";
+	std::cout << "╚══════════╩══════════╩══════════╩══════════╝\n";
 
 	std::cout << "Enter an ID: ";
 	while (true)
@@ -154,9 +154,9 @@ bool	PhoneBook::searchContact()
 			std::cout << "ID not found, try again: ";
 			continue ;
 		}
-		std::cout << "\n";
-		_contacts[digit].printContact();
 		break ;
 	}
+	std::cout << "\n";
+	_contacts[digit].printContact();
 	return (true);
 }

@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 11:02:45 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/02 09:16:58 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/02 13:28:58 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	Contact::printSearch(unsigned int index)
 	truncSearch(this->_first_name);
 	truncSearch(this->_last_name);
 	truncSearch(this->_nickname);
+	std::cout << "\n";
 }
 
 void	Contact::printContact()
