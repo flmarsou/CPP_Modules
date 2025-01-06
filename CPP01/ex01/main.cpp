@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 14:54:36 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/03 15:22:36 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/06 09:30:24 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	main(void)
 {
-	Zombie	*zombie;
 	int		N;
+	Zombie	*zombie;
 
-	zombie = zombieHorde(N, "Heaper");
 	N = 10;
+	zombie = zombieHorde(N, "Heaper");
 	if (N < 1)
 		return (1);
 
@@ -27,7 +27,7 @@ int	main(void)
 		std::cout << "[" << i << "] ";
 		zombie[i].announce();
 	}
-	delete[] zombie;
+	delete []zombie;
 
 	return (0);
 }
