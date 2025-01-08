@@ -6,9 +6,13 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 09:56:33 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/07 13:00:33 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/08 11:14:05 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main()
 {
