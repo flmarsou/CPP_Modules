@@ -6,7 +6,7 @@
 #    By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 12:31:14 by flmarsou          #+#    #+#              #
-#    Updated: 2025/01/08 14:34:51 by flmarsou         ###   ########.fr        #
+#    Updated: 2025/01/09 11:14:06 by flmarsou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,11 @@
 EXE			:=	sed
 
 # Files
-SRC			:=	main.cpp checkArgs.cpp inFile.cpp
+SRC			:=	main.cpp checkArgs.cpp fileReplacer.cpp
 
 # Variables
 CC			:=	c++
-CFLAGS		:=	-Wall -Wextra -std=c++98
+CFLAGS		:=	-Wall -Wextra -Werror -std=c++98
 
 # Makefile
 all			:	${EXE}
