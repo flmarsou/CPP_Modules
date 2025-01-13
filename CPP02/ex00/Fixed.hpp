@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 14:42:01 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/10 11:58:20 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/13 09:01:30 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Fixed
 		void	setRawBits(const int raw);
 	private:
 		int					_number;
-		static const int	_number_of_bytes = 8;
+		static const int	_number_bits_fraction = 8;
 };
 
 #endif
