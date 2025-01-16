@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 14:15:26 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/09 14:35:49 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:19:39 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,10 @@ void	Harl::complain(std::string level)
 	{
 	case 0:
 		debug();
-		break ;
 	case 1:
 		info();
-		break ;
 	case 2:
 		warning();
-		break ;
 	case 3:
 		error();
 		break ;
