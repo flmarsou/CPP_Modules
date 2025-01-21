@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 14:42:01 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/13 09:01:30 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/21 10:40:16 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,20 @@
 class Fixed
 {
 	public:
-		Fixed();								// Constructor
-		Fixed(const Fixed &fixed);				// Copy Constructor
-		Fixed 	&operator=(const Fixed &other);	// Assignment Operator
-		~Fixed();								// Destructor
+		// Constructors
+		Fixed();
+		Fixed(const Fixed &copy);
+
+		// Operators
+		Fixed 	&operator=(const Fixed &other);
+
+		// Destructors
+		~Fixed();
+
+		// Methods
 		int		getRawBits();
 		void	setRawBits(const int raw);
+
 	private:
 		int					_number;
 		static const int	_number_bits_fraction = 8;
