@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 14:54:50 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/03 15:19:27 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/21 10:31:16 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,23 @@
 class Zombie
 {
 	public:
+		// Constructors
 		Zombie();
+
+		// Destructors
 		~Zombie();
-		void	announce();
+
+		// Setters
 		void	setName(std::string name);
+
+		// Methods
+		void	announce();
+
 	private:
 		std::string	_name;
 };
 
+// Functions
 Zombie*	zombieHorde(int N, std::string name);
 
 #endif
