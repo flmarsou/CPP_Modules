@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 09:46:10 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/02 14:28:23 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/21 10:28:21 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@ int	Account::_totalAmount = 0;
 int	Account::_totalNbDeposits = 0;
 int	Account::_totalNbWithdrawals = 0;
 
+// ========================================================================== //
+//   Constructors                                                             //
+// ========================================================================== //
 Account::Account(int initial_deposit)
 {
 	this->_accountIndex = getNbAccounts();
@@ -35,6 +38,9 @@ Account::Account(int initial_deposit)
 	this->_totalAmount += initial_deposit;
 }
 
+// ========================================================================== //
+//   Destructors                                                              //
+// ========================================================================== //
 Account::~Account()
 {
 	_displayTimestamp();
@@ -43,18 +49,36 @@ Account::~Account()
 	std::cout << "closed" << std::endl;
 }
 
+// ========================================================================== //
+//   Getters                                                                  //
+// ========================================================================== //
 // Returns the total number of accounts.
-int	Account::getNbAccounts() { return (_nbAccounts); }
+int	Account::getNbAccounts()
+{
+	return (_nbAccounts);
+}
 
 // Returns the total amount of money across all accounts.
-int	Account::getTotalAmount() { return (_totalAmount); }
+int	Account::getTotalAmount()
+{
+	return (_totalAmount);
+}
 
 // Returns the total number of deposits across all accounts.
-int Account::getNbDeposits() { return (_totalNbDeposits); }
+int Account::getNbDeposits()
+{
+	return (_totalNbDeposits);
+}
 
 // Returns the total number of withdrawals across all accounts.
-int	Account::getNbWithdrawals() { return (_totalNbWithdrawals); }
+int	Account::getNbWithdrawals()
+{
+	return (_totalNbWithdrawals);
+}
 
+// ========================================================================== //
+//   Methods & Functions                                                      //
+// ========================================================================== //
 // An utility function to display timestamps.
 void	Account::_displayTimestamp()
 {
