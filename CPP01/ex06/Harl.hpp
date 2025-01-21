@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 14:15:31 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/09 14:24:16 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/21 10:35:32 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,15 @@
 class Harl
 {
 	public:
+		// Constructors
 		Harl();
+
+		// Destructors
 		~Harl();
+
+		// Methods
 		void	complain(std::string level);
+
 	private:
 		void	debug();
 		void	info();
