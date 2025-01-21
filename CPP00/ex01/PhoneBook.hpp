@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 12:56:01 by flmarsou          #+#    #+#             */
-/*   Updated: 2024/12/31 15:09:32 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/21 10:27:12 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,13 @@
 class PhoneBook
 {
 	public:
-		// Constructor
+		// Constructors
 		PhoneBook();
+
 		// Methods
 		bool	addContact();
 		bool	searchContact();
+
 	private:
 		Contact			_contacts[8];
 		unsigned int	_index;

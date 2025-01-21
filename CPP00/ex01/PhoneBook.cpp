@@ -6,24 +6,30 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 13:56:45 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/02 13:29:25 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/21 10:27:08 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
+// ========================================================================== //
+//   Constructors                                                             //
+// ========================================================================== //
 PhoneBook::PhoneBook()
 {
 	_index = 0;
 	_nbr_of_contacts = 0;
 }
 
+// ========================================================================== //
+//   Methods & Functions                                                      //
+// ========================================================================== //
 bool	PhoneBook::addContact()
 {
 	std::string firstName, lastName, nickname, phoneNumber, darkestSecret;
 
 	// First Name
-	std::cout << "\nEnter " << ITALIC << "First Name" << RESET << ": ";
+	std::cout << std::endl << "Enter " << ITALIC << "First Name" << RESET << ": ";
 	while (true)
 	{
 		if (!std::getline(std::cin, firstName))
@@ -98,7 +104,7 @@ bool	PhoneBook::addContact()
 	_contacts[_index].setNickname(nickname);
 	_contacts[_index].setPhoneNumber(phoneNumber);
 	_contacts[_index].setDarkestSecret(darkestSecret);
-	std::cout << GREEN "Contact[" << _index << "] \"" << nickname << "\" Successfully Added!\n" RESET;
+	std::cout << GREEN "Contact[" << _index << "] \"" << nickname << "\" Successfully Added!" RESET << std::endl;
 
 	if (_index == 7)
 		_index = 0;
@@ -117,16 +123,16 @@ bool	PhoneBook::searchContact()
 
 	if (_nbr_of_contacts == 0)
 	{
-		std::cout << "\nNo Contact Found!\n";
+		std::cout << std::endl << "No Contact Found!" << std::endl;
 		return (true);
 	}
 
-	std::cout << "\n╔══════════╦══════════╦══════════╦══════════╗\n";
-	std::cout << "║    ID    ║ Forename ║ Lastname ║ Nickname ║\n";
-	std::cout << "╠══════════╬══════════╬══════════╬══════════╣\n";
+	std::cout << std::endl << "╔══════════╦══════════╦══════════╦══════════╗" << std::endl;
+	std::cout << "║    ID    ║ Forename ║ Lastname ║ Nickname ║" << std::endl;
+	std::cout << "╠══════════╬══════════╬══════════╬══════════╣" << std::endl;
 	for (unsigned int i = 0; i < _nbr_of_contacts; i++)
 		_contacts[i].printSearch(i);
-	std::cout << "╚══════════╩══════════╩══════════╩══════════╝\n";
+	std::cout << "╚══════════╩══════════╩══════════╩══════════╝" << std::endl;
 
 	std::cout << "Enter an ID: ";
 	while (true)
@@ -156,7 +162,7 @@ bool	PhoneBook::searchContact()
 		}
 		break ;
 	}
-	std::cout << "\n";
+	std::cout << std::endl;
 	_contacts[digit].printContact();
 	return (true);
 }
