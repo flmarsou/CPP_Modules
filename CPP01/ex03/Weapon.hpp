@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:19:51 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/08 12:24:42 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/21 10:34:36 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,18 @@
 class Weapon
 {
 	public:
+		// Constructors
 		Weapon(std::string type);
+
+		// Destructors
 		~Weapon();
+
+		// Setters
+		void	setType(std::string type);
+
+		// Getters
 		const std::string	&getType();
-		void				setType(std::string type);
+
 	private:
 		std::string	_type;
 };
