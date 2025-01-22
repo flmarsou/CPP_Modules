@@ -15,6 +15,7 @@
 // ========================================================================== //
 //   Constructors                                                             //
 // ========================================================================== //
+
 Fixed::Fixed() : _number(0)
 {
 	std::cout << GRAY "Default constructor called" RESET << std::endl;
@@ -40,6 +41,7 @@ Fixed	&Fixed::operator=(const Fixed &other)
 // ========================================================================== //
 //   Destructors                                                              //
 // ========================================================================== //
+
 Fixed::~Fixed()
 {
 	std::cout << GRAY "Destructor called" RESET << std::endl;
@@ -48,6 +50,7 @@ Fixed::~Fixed()
 // ========================================================================== //
 //   Methods & Functions                                                      //
 // ========================================================================== //
+
 int		Fixed::getRawBits()
 {
 	std::cout << "getRawBits member function called" << std::endl;
