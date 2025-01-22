@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 11:41:02 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/10 11:41:03 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/22 12:08:09 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Fixed::Fixed() : _number(0)
 Fixed::Fixed(const int nbr)
 {
 	std::cout << GRAY "Int constructor called" RESET << std::endl;
-	this->_number = nbr;
+	this->_number = nbr << this->_number_bits_fraction;
 }
 
 Fixed::Fixed(const float flt)
@@ -73,11 +73,11 @@ Fixed::~Fixed()
 // Converts the fixed-point value to a floating-point value.
 float	Fixed::toFloat() const
 {
-	
+	return ((float)this->_number / (1 << this->_number_bits_fraction));
 }
 
 // Converts the fixed-point value to an integer value.
 int		Fixed::toInt() const
 {
-	
+	return (this->_number >> this->_number_bits_fraction);
 }
