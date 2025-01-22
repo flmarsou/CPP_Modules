@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 11:40:32 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/22 13:14:06 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/22 14:47:07 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int main()
 {
 	Fixed		a;
-	Fixed const	b(10);
-	Fixed const	c(42.42f);
-	Fixed const	d(b);
+	const Fixed	b(10);
+	const Fixed	c(42.42f);
+	const Fixed	d(b);
 
 	a = Fixed(1234.4321f);
 	std::cout << "a is " << a << std::endl;

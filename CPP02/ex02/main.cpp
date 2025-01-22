@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 13:08:17 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/22 13:14:41 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/22 15:28:13 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 int main()
 {
-	Fixed		a;
-	Fixed const	b(Fixed(5.05f) * Fixed(2));
+	Fixed	a;
+	Fixed	b(42);
+	Fixed	c(42.42f);
 
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max(a, b) << std::endl;
+	// Great Than
+	std::cout << "a(" << a << ") " << "> b(" << b << ") : ";
+	std::cout << (a > b ? "true" : "false") << std::endl;
 	return (0);
 }
