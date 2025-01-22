@@ -22,18 +22,27 @@
 class Fixed
 {
 	public:
+		// Constructors
 		Fixed();
 		Fixed(const int nbr);
 		Fixed(const float flt);
-		Fixed(const Fixed &fixed);
-		Fixed& operator=(const Fixed &other);
+		Fixed(const Fixed &copy);
+
+		// Operators
+		Fixed	&operator=(const Fixed &other);
+
+		// Destructors
 		~Fixed();
 
-		int		toInt() const;
+		// Methods
 		float	toFloat() const;
+		int		toInt() const;
+
 	private:
 		int					_number;
 		static const int	_number_bits_fraction = 8;
 };
+
+std::ostream	&operator<<(std::ostream &out, const Fixed &fixed);
 
 #endif
