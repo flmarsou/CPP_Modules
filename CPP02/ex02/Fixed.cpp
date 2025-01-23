@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:11:43 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/22 14:41:39 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/23 14:36:59 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,36 @@ Fixed			Fixed::operator/(const Fixed &other) const
 	return (this->toFloat() / other.toFloat());
 }
 
+Fixed			Fixed::operator++()
+{
+	*this = this->toFloat() + 1;
+	return (*this);
+}
+
+Fixed			Fixed::operator++(int)
+{
+	Fixed	temp;
+
+	temp = *this;
+	*this = this->toFloat() + 1;
+	return (temp);
+}
+
+Fixed			Fixed::operator--()
+{
+	*this = this->toFloat() - 1;
+	return (*this);
+}
+
+Fixed			Fixed::operator--(int)
+{
+	Fixed	temp;
+
+	temp = *this;
+	*this = this->toFloat() - 1;
+	return (temp);
+}
+
 // ========================================================================== //
 //   Destructors                                                              //
 // ========================================================================== //
@@ -134,13 +164,11 @@ Fixed::~Fixed()
 // ========================================================================== //
 
 
-// Converts the fixed-point value to a floating-point value.
 float	Fixed::toFloat() const
 {
 	return ((float)this->_number / (1 << this->_number_bits_fraction));
 }
 
-// Converts the fixed-point value to an integer value.
 int		Fixed::toInt() const
 {
 	return (this->_number >> this->_number_bits_fraction);
