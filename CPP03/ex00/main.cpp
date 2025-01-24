@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 14:48:11 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/24 10:40:42 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/01/24 12:28:04 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	main()
 {
-	ClapTrap unit0("Bondold");
-	ClapTrap unit1("Nanachi");
+	ClapTrap	unit0("Bondold");
+	ClapTrap	unit1("Nanachi");
 
 	// Attack
 	unit1.attack("ClapTrap");
