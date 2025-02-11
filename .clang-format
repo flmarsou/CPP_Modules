@@ -1,0 +1,18 @@
+---
+Language: Cpp
+
+AccessModifierOffset: 0					# Extra indent or outdent of access modifiers (public, private, ...).
+
+AlignAfterOpenBracket: true				# Aligns arguments after an open bracket.
+AlignConsecutiveMacros: true			# Aligns preprocessor macros of consecutive lines.
+AlignConsecutiveAssignments: true		# Aligns the assignment operators of consecutive lines.
+AlignConsecutiveDeclarations: true		# Aligns declaration names of consecutive lines.
+AlignTrailingComments: true				# Aligns trailing comments of consecutive lines.
+
+BreakBeforeBraces: Allman				# Always adds a newline before braces.
+
+IndentWidth: 4
+TabWidth: 4
+UseTab: Always
+
+---
