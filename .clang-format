@@ -63,4 +63,6 @@ AllowAllArgumentsOnNextLine: true
 BinPackArguments: true
 BinPackParameters: true
 
+ColumnLimit: 120
+
 BreakBeforeBraces: Allman
