@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:11:43 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/23 14:36:59 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:42:00 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 //   Constructors                                                             //
 // ========================================================================== //
 
-Fixed::Fixed() : _number(0)
+Fixed::Fixed()
+	:	_number(0)
 {
 	std::cout << GRAY "Default constructor called" RESET << std::endl;
 }

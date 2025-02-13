@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 14:48:07 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/02/13 14:29:27 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:01:22 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@
 //   Constructors                                                             //
 // ========================================================================== //
 
-Fixed::Fixed() : _number(0)
+Fixed::Fixed()
+	:	_number(0)
 {
 	std::cout << GRAY "Default constructor called" RESET << std::endl;
 }
 
 Fixed::Fixed(const Fixed &copy)
+	:	_number(copy._number)
 {
 	std::cout << GRAY "Copy constructor called" RESET << std::endl;
-	this->_number = copy._number;
 }
 
 // ========================================================================== //
