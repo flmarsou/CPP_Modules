@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 14:48:07 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/21 10:40:12 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:29:27 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,16 +48,20 @@ Fixed::~Fixed()
 }
 
 // ========================================================================== //
-//   Methods & Functions                                                      //
+//   Setters                                                                  //
+// ========================================================================== //
+
+void	Fixed::setRawBits(const int raw)
+{
+	this->_number = raw;
+}
+
+// ========================================================================== //
+//   Getters                                                                  //
 // ========================================================================== //
 
 int		Fixed::getRawBits()
 {
 	std::cout << "getRawBits member function called" << std::endl;
 	return (this->_number);
-}
-
-void	Fixed::setRawBits(const int raw)
-{
-	this->_number = raw;
 }

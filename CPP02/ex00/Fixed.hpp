@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 14:42:01 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/02/13 14:15:47 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:29:51 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,11 @@ class Fixed
 		// Destructors
 		~Fixed();
 
-		// Methods
-		int		getRawBits();
+		// Setters
 		void	setRawBits(const int raw);
+
+		// Getters
+		int		getRawBits();
 
 	private:
 		int					_number;
