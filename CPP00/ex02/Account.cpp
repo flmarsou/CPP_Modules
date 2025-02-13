@@ -6,11 +6,12 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 09:46:10 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/21 10:28:21 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 13:52:17 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
+
 #include <iostream>
 #include <ctime>
 
@@ -22,13 +23,11 @@ int	Account::_totalNbWithdrawals = 0;
 // ========================================================================== //
 //   Constructors                                                             //
 // ========================================================================== //
-Account::Account(int initial_deposit)
-{
-	this->_accountIndex = getNbAccounts();
-	this->_amount = initial_deposit;
-	this->_nbDeposits = 0;
-	this->_nbWithdrawals = 0;
 
+Account::Account(int initial_deposit)
+	:	_accountIndex(getNbAccounts()), _amount(initial_deposit),
+		_nbDeposits(0), _nbWithdrawals(0)
+{
 	_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex << ";";
 	std::cout << "amount:" << this->_amount << ";";
@@ -41,6 +40,7 @@ Account::Account(int initial_deposit)
 // ========================================================================== //
 //   Destructors                                                              //
 // ========================================================================== //
+
 Account::~Account()
 {
 	_displayTimestamp();
@@ -52,6 +52,7 @@ Account::~Account()
 // ========================================================================== //
 //   Getters                                                                  //
 // ========================================================================== //
+
 // Returns the total number of accounts.
 int	Account::getNbAccounts()
 {
@@ -79,6 +80,7 @@ int	Account::getNbWithdrawals()
 // ========================================================================== //
 //   Methods & Functions                                                      //
 // ========================================================================== //
+
 // An utility function to display timestamps.
 void	Account::_displayTimestamp()
 {
@@ -146,7 +148,10 @@ bool	Account::makeWithdrawal(int withdrawal)
 }
 
 // Returns the current amount in the account (unused).
-int		Account::checkAmount() const { return (this->_amount); }
+int		Account::checkAmount() const
+{
+	return (this->_amount);
+}
 
 // Displays the status of the account (balance, deposits, withdrawals).
 void	Account::displayStatus() const

@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 11:08:07 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/09 11:11:43 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:02:02 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ bool	createOutfile(std::string content, const char *filename)
 
 std::string	replaceContent(std::string content, const char *strSearch, const char *strReplace)
 {
-	size_t	searchLength;
-	size_t	replaceLength;
-	size_t	pos;
+	unsigned long	searchLength;
+	unsigned long	replaceLength;
+	unsigned long	pos;
 
 	searchLength = std::strlen(strSearch);
 	replaceLength = std::strlen(strReplace);

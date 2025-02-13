@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:16:35 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/21 10:33:19 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 13:56:57 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,26 @@
 // ========================================================================== //
 //   Constructors                                                             //
 // ========================================================================== //
+
 Weapon::Weapon(std::string type)
 	: _type(type)
 {
-	std::cout << GRAY << "Weapon \"" << this->_type << "\" Constructor called..." << RESET << std::endl;
+	std::cout << GRAY "Weapon \"" << this->_type << "\" Constructor called..." RESET << std::endl;
 }
 
 // ========================================================================== //
 //   Destructors                                                              //
 // ========================================================================== //
+
 Weapon::~Weapon()
 {
-	std::cout << GRAY << "Weapon \"" << this->_type << "\" Destructor called..." << RESET << std::endl;
+	std::cout << GRAY "Weapon \"" << this->_type << "\" Destructor called..." RESET << std::endl;
 }
 
 // ========================================================================== //
 //   Setters                                                                  //
 // ========================================================================== //
+
 void	Weapon::setType(std::string type)
 {
 	this->_type = type;
@@ -40,6 +43,7 @@ void	Weapon::setType(std::string type)
 // ========================================================================== //
 //   Getters                                                                  //
 // ========================================================================== //
+
 const std::string	&Weapon::getType()
 {
 	return (_type);

@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 12:42:38 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/21 10:27:04 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 13:47:03 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,12 @@ class Contact
 		void	setPhoneNumber(std::string phoneNumber);
 		void	setDarkestSecret(std::string darkestSecret);
 
+		// Destructors
+		~Contact();
+
 		// Methods
-		void	printSearch(unsigned int index);
-		void	printContact();
+		void	printSearch(unsigned int index) const;
+		void	printContact() const;
 
 	private:
 		std::string	_first_name;

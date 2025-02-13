@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 08:35:11 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/24 11:40:36 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:20:17 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,21 @@
 //   Constructors                                                             //
 // ========================================================================== //
 
-ClapTrap::ClapTrap() :
-	_name("ClapTrap"), _hitPoints(10), _energyPoints(10), _attackDamage(0)
+ClapTrap::ClapTrap()
+	:	_name("ClapTrap"), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
 	std::cout << GRAY << this->_name << " Constructor Called" RESET << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string name) :
-	_name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
+ClapTrap::ClapTrap(const std::string name)
+	:	_name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
 	std::cout << GRAY << this->_name << " ClapTrap Constructor Called" RESET << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &copy) :
-	_name(copy._name), _hitPoints(copy._hitPoints), _energyPoints(copy._energyPoints), _attackDamage(copy._attackDamage)
+ClapTrap::ClapTrap(const ClapTrap &copy)
+	:	_name(copy._name), _hitPoints(copy._hitPoints),
+		_energyPoints(copy._energyPoints), _attackDamage(copy._attackDamage)
 {
 	std::cout << GRAY << this->_name << " ClapTrap Copy Constructor Called" RESET << std::endl;
 }

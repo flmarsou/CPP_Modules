@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 11:41:00 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/14 09:57:24 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:16:04 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <iostream>
 # include <cmath>
 
-# define GRAY		"\e[30m"
-# define RESET		"\e[0m"
+# define GRAY	"\e[30m"
+# define RESET	"\e[0m"
 
 class Fixed
 {

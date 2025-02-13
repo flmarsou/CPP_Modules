@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 13:48:29 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/02/04 13:49:00 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:24:25 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 //   Constructors                                                             //
 // ========================================================================== //
 
-WrongAnimal::WrongAnimal() :
-	_type("")
+WrongAnimal::WrongAnimal()
+	:	_type("")
 {
 	std::cout << GRAY "WrongAnimal Constructor Called" RESET << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &copy) :
-	_type(copy._type)
+WrongAnimal::WrongAnimal(const WrongAnimal &copy)
+	:	_type(copy._type)
 {
 	std::cout << GRAY "WrongAnimal Copy Constructor Called" RESET << std::endl;
 }

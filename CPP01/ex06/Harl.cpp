@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 14:15:26 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/21 10:35:29 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:03:57 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 // ========================================================================== //
 //   Constructors                                                             //
 // ========================================================================== //
+
 Harl::Harl()
 {
 	std::cout << GRAY "Constructor called..." RESET << std::endl;
@@ -23,6 +24,7 @@ Harl::Harl()
 // ========================================================================== //
 //   Destructors                                                              //
 // ========================================================================== //
+
 Harl::~Harl()
 {
 	std::cout << GRAY "Destructor called..." RESET << std::endl;
@@ -31,6 +33,7 @@ Harl::~Harl()
 // ========================================================================== //
 //   Methods & Functions                                                      //
 // ========================================================================== //
+
 void	Harl::complain(std::string level)
 {
 	const std::string	levelArray[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
@@ -45,18 +48,18 @@ void	Harl::complain(std::string level)
 	
 	switch (levelNumber)
 	{
-	case 0:
-		debug();
-	case 1:
-		info();
-	case 2:
-		warning();
-	case 3:
-		error();
-		break ;
-	default:
-		std::cout << GREEN "[ Probably complaining about insignificant problems ]" RESET << std::endl;
-		break ;
+		case 0:
+			debug();
+		case 1:
+			info();
+		case 2:
+			warning();
+		case 3:
+			error();
+			break ;
+		default:
+			std::cout << GREEN "[ Probably complaining about insignificant problems ]" RESET << std::endl;
+			break ;
 	}
 }
 

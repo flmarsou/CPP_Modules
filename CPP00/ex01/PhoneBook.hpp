@@ -6,16 +6,16 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 12:56:01 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/21 10:27:12 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 13:49:13 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_H
 # define PHONEBOOK_H
 
-# include <iostream>
-
 # include "Contact.hpp"
+
+# include <iostream>
 
 # define ITALIC	"\e[3m"
 # define GREEN	"\e[32m"
@@ -27,9 +27,12 @@ class PhoneBook
 		// Constructors
 		PhoneBook();
 
+		// Destructors
+		~PhoneBook();
+
 		// Methods
 		bool	addContact();
-		bool	searchContact();
+		bool	searchContact() const;
 
 	private:
 		Contact			_contacts[8];

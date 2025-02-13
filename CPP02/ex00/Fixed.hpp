@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 14:42:01 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/21 10:40:16 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:15:47 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <iostream>
 
-# define GRAY		"\e[30m"
-# define RESET		"\e[0m"
+# define GRAY	"\e[30m"
+# define RESET	"\e[0m"
 
 class Fixed
 {

@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 14:48:25 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/24 11:48:41 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:19:29 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 # include <iostream>
 
-# define GRAY		"\e[30m"
-# define RED		"\e[31m"
-# define GREEN		"\e[32m"
-# define YELLOW		"\e[33m"
-# define ORANGE		"\e[34m"
-# define BLUE		"\e[36m"
-# define RESET		"\e[0m"
+# define GRAY	"\e[30m"
+# define RED	"\e[31m"
+# define GREEN	"\e[32m"
+# define YELLOW	"\e[33m"
+# define ORANGE	"\e[34m"
+# define BLUE	"\e[36m"
+# define RESET	"\e[0m"
 
 class ClapTrap
 {

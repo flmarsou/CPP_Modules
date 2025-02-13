@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 10:30:14 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/02/04 08:58:17 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:22:21 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@
 //   Constructors                                                             //
 // ========================================================================== //
 
-DiamondTrap::DiamondTrap() :
-	ClapTrap(),
-	ScavTrap(),
-	FragTrap()
+DiamondTrap::DiamondTrap()
+	:	ClapTrap(), ScavTrap(), FragTrap()
 {
 	this->_name = ClapTrap::_name;
 	this->_hitPoints = FragTrap::_hitPoints;
@@ -28,10 +26,8 @@ DiamondTrap::DiamondTrap() :
 	std::cout << GRAY << this->_name << " DiamondTrap Constructor Called" RESET << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const std::string name) :
-	ClapTrap(name + "_clap_name"),
-	ScavTrap(),
-	FragTrap()
+DiamondTrap::DiamondTrap(const std::string name)
+	:	ClapTrap(name + "_clap_name"), ScavTrap(), FragTrap()
 {
 	this->_name = name + "_clap_name";
 	this->_hitPoints = FragTrap::_hitPoints;
@@ -40,10 +36,8 @@ DiamondTrap::DiamondTrap(const std::string name) :
 	std::cout << GRAY << this->_name << " DiamondTrap Constructor Called" RESET << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &copy) :
-	ClapTrap(copy),
-	ScavTrap(copy),
-	FragTrap(copy)
+DiamondTrap::DiamondTrap(const DiamondTrap &copy)
+	:	ClapTrap(copy), ScavTrap(copy), FragTrap(copy)
 {
 	this->_hitPoints = copy._hitPoints;
 	this->_energyPoints = copy._energyPoints;

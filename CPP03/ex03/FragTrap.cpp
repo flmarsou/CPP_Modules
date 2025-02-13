@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 12:21:05 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/02/03 13:35:30 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:22:50 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 //   Constructors                                                             //
 // ========================================================================== //
 
-FragTrap::FragTrap() :
-	ClapTrap()
+FragTrap::FragTrap()
+	:	ClapTrap()
 {
 	this->_name = "FragTrap";
 	this->_hitPoints = 100;
@@ -26,8 +26,8 @@ FragTrap::FragTrap() :
 	std::cout << GRAY << this->_name << " FragTrap Constructor Called" RESET << std::endl;
 }
 
-FragTrap::FragTrap(const std::string name) :
-	ClapTrap(name)
+FragTrap::FragTrap(const std::string name)
+	:	ClapTrap(name)
 {
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
