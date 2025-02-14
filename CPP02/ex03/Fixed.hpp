@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/10 11:41:00 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/02/13 14:16:04 by flmarsou         ###   ########.fr       */
+/*   Created: 2025/01/22 13:10:34 by flmarsou          #+#    #+#             */
+/*   Updated: 2025/02/13 14:16:35 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,27 @@ class Fixed
 		Fixed();
 		Fixed(const int nbr);
 		Fixed(const float flt);
-		Fixed(const Fixed &copy);
+		Fixed(const Fixed &other);
 
 		// Operators
 		Fixed	&operator=(const Fixed &other);
+
+		bool	operator>(const Fixed &other) const;	// Greater Than
+		bool	operator<(const Fixed &other) const;	// Less Than
+		bool	operator>=(const Fixed &other) const;	// Greater Than or Equal To
+		bool	operator<=(const Fixed &other) const;	// Less Than or Equal To
+		bool	operator==(const Fixed &other) const;	// Is Equal To
+		bool	operator!=(const Fixed &other) const;	// Not Equal To
+
+		Fixed	operator+(const Fixed &other) const;	// Addition
+		Fixed	operator-(const Fixed &other) const;	// Subtraction
+		Fixed	operator*(const Fixed &other) const;	// Multiplication
+		Fixed	operator/(const Fixed &other) const;	// Division
+
+		Fixed	operator++();							// Pre-Increment
+		Fixed	operator++(int);						// Post-Increment
+		Fixed	operator--();							// Pre-Decrement
+		Fixed	operator--(int);						// Post-Decrement
 
 		// Destructors
 		~Fixed();
