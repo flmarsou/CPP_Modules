@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 10:03:30 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/02/13 12:45:13 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/02/24 08:45:41 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int argc, char **argv)
 
 	std::string TextToPrint;
 
-	for (unsigned int y = 1; y < argc; y++)
+	for (unsigned int y = 1; y < (unsigned int)argc; y++)
 	{
 		TextToPrint =+ argv[y];
 	}
