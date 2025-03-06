@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 10:30:14 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/02/13 14:22:21 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/06 12:00:47 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,9 @@ void	DiamondTrap::whoAmI()
 {
 	std::cout << BLUE "DiamondTrap's name: \"" << this->_name << "\"";
 	std::cout << " and its ClapTrap name: \"" << ClapTrap::_name << "\"" << std::endl;
+}
+
+void	DiamondTrap::attack(const std::string &target)
+{
+	ScavTrap::attack(target);
 }

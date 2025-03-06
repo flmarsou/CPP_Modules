@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 10:53:49 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/24 11:51:56 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/06 11:04:00 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,22 @@ void	ScavTrap::guardGate()
 			std::cout << RED << this->_name << " is dead. Can't be Gate Keeper!" << RESET << std::endl;
 		else if (this->_energyPoints <= 0)
 			std::cout << RED << this->_name << " doesn't have enough EP to be Gate Keeper!" << RESET << std::endl;
+	}
+}
+
+void	ScavTrap::attack(const std::string &target)
+{
+	if (this->_hitPoints > 0 && this->_energyPoints > 0)
+	{
+		std::cout << YELLOW << this->_name << " is attacking " << target << "! " RESET;
+		std::cout << this->_energyPoints << " -> " << this->_energyPoints - 1 << " EP" << std::endl;
+		this->_energyPoints--;
+	}
+	else
+	{
+		if (this->_hitPoints <= 0)
+			std::cout << RED << this->_name << " isn't alive. Cannot attack!" << RESET << std::endl;
+		else if (this->_energyPoints <= 0)
+			std::cout << RED << this->_name << " doesn't have enough EP to attack!" << RESET << std::endl;
 	}
 }

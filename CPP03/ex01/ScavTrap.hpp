@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 10:53:51 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/24 11:47:09 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/06 10:57:19 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class ScavTrap : public ClapTrap
 
 		// Methods
 		void	guardGate();
+		void	attack(const std::string &target);
 };
 
 #endif
