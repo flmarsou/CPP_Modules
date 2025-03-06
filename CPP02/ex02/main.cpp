@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 13:08:17 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/23 14:35:11 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/06 10:45:56 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -219,6 +219,20 @@ int main()
 	std::cout << "After: c--(" << c << ")" << std::endl;
 	std::cout << "Before: d--(" << d-- << ")" << std::endl;
 	std::cout << "After: d--(" << d << ")" << std::endl;
+
+	std::cout << std::endl;
+
+	// Min-Max
+	std::cout << "=== Min-Max ===================" << std::endl;
+
+	std::cout << "A: " << a << " | B: " << b << std::endl;
+	std::cout << "Min: " << Fixed::min(a, b) << std::endl;
+	std::cout << "Max: " << Fixed::max(a, b) << std::endl;
+	std::cout << "C: " << c << " | D: " << d << std::endl;
+	std::cout << "Min: " << Fixed::min(c, d) << std::endl;
+	std::cout << "Max: " << Fixed::max(c, d) << std::endl;
+
+	std::cout << std::endl;
 
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:11:43 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/02/13 14:42:00 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/06 10:43:29 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,24 @@
 Fixed::Fixed()
 	:	_number(0)
 {
-	std::cout << GRAY "Default constructor called" RESET << std::endl;
+	//std::cout << GRAY "Default constructor called" RESET << std::endl;
 }
 
 Fixed::Fixed(const int nbr)
 {
-	std::cout << GRAY "Int constructor called" RESET << std::endl;
+	//std::cout << GRAY "Int constructor called" RESET << std::endl;
 	this->_number = nbr << this->_number_bits_fraction;
 }
 
 Fixed::Fixed(const float flt)
 {
-	std::cout << GRAY "Float constructor called" RESET << std::endl;
+	//std::cout << GRAY "Float constructor called" RESET << std::endl;
 	this->_number = roundf(flt * (1 << this->_number_bits_fraction));
 }
 
 Fixed::Fixed(const Fixed &copy)
 {
-	std::cout << GRAY "Copy constructor called" RESET << std::endl;
+	//std::cout << GRAY "Copy constructor called" RESET << std::endl;
 	this->_number = copy._number;
 }
 
@@ -46,7 +46,7 @@ Fixed::Fixed(const Fixed &copy)
 
 Fixed			&Fixed::operator=(const Fixed &other)
 {
-	std::cout << GRAY "Copy assignment operator called" RESET << std::endl;
+	//std::cout << GRAY "Copy assignment operator called" RESET << std::endl;
 	this->_number = other._number;
 	return (*this);
 }
@@ -157,7 +157,7 @@ Fixed			Fixed::operator--(int)
 
 Fixed::~Fixed()
 {
-	std::cout << GRAY "Destructor called" RESET << std::endl;
+	//std::cout << GRAY "Destructor called" RESET << std::endl;
 }
 
 // ========================================================================== //
@@ -173,4 +173,36 @@ float	Fixed::toFloat() const
 int		Fixed::toInt() const
 {
 	return (this->_number >> this->_number_bits_fraction);
+}
+
+Fixed	Fixed::min(Fixed &a, Fixed &b)
+{
+	if (a < b)
+		return (a);
+	else
+		return (b);
+}
+
+Fixed	Fixed::min(const Fixed &a, const Fixed &b)
+{
+	if (a < b)
+		return (a);
+	else
+		return (b);
+}
+
+Fixed	Fixed::max(Fixed &a, Fixed &b)
+{
+	if (a > b)
+		return (a);
+	else
+		return (b);
+}
+
+Fixed	Fixed::max(const Fixed &a, const Fixed &b)
+{
+	if (a > b)
+		return (a);
+	else
+		return (b);
 }

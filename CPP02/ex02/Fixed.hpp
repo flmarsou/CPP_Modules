@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 13:10:34 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/02/13 14:16:35 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/06 10:42:51 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,12 @@ class Fixed
 		~Fixed();
 
 		// Methods
-		float	toFloat() const;
-		int		toInt() const;
+		float			toFloat() const;
+		int				toInt() const;
+		static Fixed	min(Fixed &a, Fixed &b);
+		static Fixed	min(const Fixed &a, const Fixed &b);
+		static Fixed	max(Fixed &a, Fixed &b);
+		static Fixed	max(const Fixed &a, const Fixed &b);
 
 	private:
 		int					_number;
