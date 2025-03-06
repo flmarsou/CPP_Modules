@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 14:48:11 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/02/04 08:54:51 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/06 11:58:33 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@ int	main()
 
 	unit0.whoAmI();
 	unit1.whoAmI();
+
+	unit0.attack("itself");
+	unit1.takeDamage(50);
 
 	return (0);
 }

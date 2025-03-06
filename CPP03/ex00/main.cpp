@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 14:48:11 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/01/24 12:28:04 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/06 11:48:27 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main()
 	ClapTrap	unit1("Nanachi");
 
 	// Attack
-	unit1.attack("ClapTrap");
+	unit1.attack("Bondold");
 	unit0.takeDamage(5);
 
 	// Repair
@@ -38,13 +38,13 @@ int	main()
 	unit0.attack("Nanachi");
 
 	// Kill
-	unit1.attack("ClapTrap");
+	unit1.attack("Bondold");
 	unit0.takeDamage(15);
 
 	// Not enough Hit Points
 	unit0.beRepaired(100);
 	unit0.attack("Nanachi");
-	unit1.attack("ClapTrap");
+	unit1.attack("Bondold");
 	unit0.takeDamage(5);
 
 	return (0);
