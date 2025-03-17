@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 15:07:01 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/02/13 14:25:48 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/17 12:34:09 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@
 # define BLUE	"\e[36m"
 # define RESET	"\e[0m"
 
-# define NBR_OF_IDEAS	100
-
 class Brain
 {
 	public:
@@ -39,9 +37,10 @@ class Brain
 		~Brain();
 
 		// Methods
+		void	printIdeas() const;
 
 	private:
-		std::string	_ideas[NBR_OF_IDEAS];
+		std::string	_ideas[100];
 };
 
 #endif
