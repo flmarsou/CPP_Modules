@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 12:31:01 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/03/17 14:50:22 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/18 09:42:58 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,4 @@ AAnimal	&AAnimal::operator=(const AAnimal &other)
 AAnimal::~AAnimal()
 {
 	std::cout << GRAY "AAnimal Destructor Called" RESET << std::endl;
-}
-
-// ========================================================================== //
-//   Methods & Functions                                                      //
-// ========================================================================== //
-
-void	AAnimal::makeSound() const
-{
-	std::cout << BLUE "* Eldritch noises... *" RESET << std::endl;
 }
