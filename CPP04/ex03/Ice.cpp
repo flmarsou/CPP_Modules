@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 18:06:03 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/03/19 18:24:04 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/28 13:12:39 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@
 //   Constructors & Destructors                                               //
 // ========================================================================== //
 
-Ice::Ice()
+Ice::Ice() : AMateria("ice")
 {
 	std::cout << GRAY "Ice Constructor Called" RESET << std::endl;
 }
 
 Ice::Ice(const Ice &copy)
 {
-	*this = copy;
+	(void)copy;
 	std::cout << GRAY "Ice Copy Constructor Called" RESET << std::endl;
 }
 
@@ -41,6 +41,7 @@ Ice::~Ice()
 
 Ice	&Ice::operator=(const Ice &other)
 {
+	(void)other;
 	std::cout << GRAY "Ice Copy Assignment Constructor Called" RESET << std::endl;
 	return (*this);
 }
@@ -49,9 +50,9 @@ Ice	&Ice::operator=(const Ice &other)
 //   Methods & Functions                                                      //
 // ========================================================================== //
 
-AMateria	*Ice::clone() const
+Ice	*Ice::clone() const
 {
-	return (new Ice(*this));
+	return (new Ice());
 }
 
 void		Ice::use(ICharacter &target)

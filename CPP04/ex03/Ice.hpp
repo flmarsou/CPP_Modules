@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 17:50:48 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/03/19 18:05:55 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/28 13:12:46 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "AMateria.hpp"
 
-class Ice : public AMateria
+class Ice : virtual public AMateria
 {
 	public:
 		Ice();
@@ -24,8 +24,8 @@ class Ice : public AMateria
 
 		Ice &operator=(const Ice &other);
 
-		virtual AMateria	*clone() const;
-		void				use(ICharacter &target);
+		Ice		*clone() const;
+		void	use(ICharacter &target);
 };
 
 #endif
