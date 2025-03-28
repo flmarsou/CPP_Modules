@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 16:46:37 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/03/28 13:15:20 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/28 13:23:41 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,6 @@ void				Character::equip(AMateria *materia)
 		{
 			this->_inventory[i] = materia;
 			std::cout << "Materia added in " << i << " slot!" << std::endl;
-			std::cout << this->_inventory[i]->getType() << std::endl;
 			return ;
 		}
 	}
