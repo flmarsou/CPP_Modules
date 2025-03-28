@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 16:40:07 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/03/19 17:00:06 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/28 13:11:36 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ICharacter.hpp"
 
-class Character : public ICharacter
+class Character : virtual public ICharacter
 {
 	public:
 		Character();

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anvacca <anvacca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 17:54:22 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/03/19 18:23:08 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/28 12:58:19 by anvacca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "IMateriaSource.hpp"
 
-class MateriaSource : public IMateriaSource
+class MateriaSource : virtual public IMateriaSource
 {
 	public:
 		MateriaSource();

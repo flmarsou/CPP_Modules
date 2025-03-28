@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 14:15:03 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/03/19 18:05:53 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/03/28 13:11:33 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class AMateria
 		AMateria();
 		AMateria(const std::string &type);
 		AMateria(const AMateria &copy);
-		~AMateria();
+		virtual ~AMateria();
 
 		AMateria	&operator=(const AMateria &other);
 
