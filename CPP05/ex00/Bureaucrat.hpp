@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 11:47:19 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/02 16:30:38 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/03 10:39:45 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,3 +42,5 @@ class Bureaucrat
 		const std::string	_name;
 		int					_grade;
 };
+
+std::ostream	&operator<<(std::ostream &out, const Bureaucrat &bureaucrat);

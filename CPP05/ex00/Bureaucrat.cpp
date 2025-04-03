@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 11:50:50 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/02 16:25:02 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/03 10:46:35 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,16 @@ Bureaucrat::~Bureaucrat()
 //   Operators                                                                //
 // ========================================================================== //
 
-Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &other)
+Bureaucrat		&Bureaucrat::operator=(const Bureaucrat &other)
 {
 	this->_grade = other._grade;
 	return (*this);
+}
+
+std::ostream	&operator<<(std::ostream &out, const Bureaucrat &context)
+{
+	out << context.getName() << ", bureaucrat grade " << context.getGrade();
+	return (out);
 }
 
 // ========================================================================== //
