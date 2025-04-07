@@ -6,33 +6,52 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 16:19:42 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/03 13:23:24 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/07 15:35:41 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "Form.hpp"
 
-int	main()
+void	tryForm(const std::string name, const int gradeRequiredToSign, const int gradeRequiredToExecute)
 {
 	try
 	{
-		Bureaucrat	toto("Toto", 42);
-		std::cout << toto << std::endl;
-		Bureaucrat	tata("Tata", 1);
-		std::cout << tata << std::endl;
-		Bureaucrat	titi("Titi", 150);
-		std::cout << titi << std::endl;
-		//Bureaucrat	wrongToto("WrongToto", -42);
-		//std::cout << wrongToto << std::endl;
-		//Bureaucrat	wrongTata("WrongTata", 0);
-		//std::cout << wrongTata << std::endl;
-		//Bureaucrat	wrongTiti("WrongTiti", 151);
-		//std::cout << wrongTiti << std::endl;
+		Form	form(name, gradeRequiredToSign, gradeRequiredToExecute);
 	}
-	catch (const std::exception &e)
+	catch(const std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	
+}
+
+void	trySignForm(const std::string name, const int grade)
+{
+	try
+	{
+		Bureaucrat	test(name, grade);
+		Form		form("Form", 50, 50);
+		test.signForm(form);
+	}
+	catch(const std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+}
+
+int	main()
+{
+	std::cout << "=== Signing ===" << std::endl;
+	trySignForm("Toto", 1);
+	trySignForm("Tata", 49);
+	trySignForm("Titi", 50);
+	trySignForm("Tutu", 51);
+
+	std::cout << "\n=== Forms ===" << std::endl;
+	tryForm("Formox", 1, 150);
+	tryForm("Formax", 150, 1);
+	tryForm("Formix", 0, 50);
+	tryForm("Formux", 50, 151);
 
 	return (0);
 }
