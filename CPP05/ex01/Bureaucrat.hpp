@@ -6,20 +6,24 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 11:47:19 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/03 10:39:45 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/07 15:12:29 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
+# include "Form.hpp"
 # include <iostream>
 # include <exception>
+
+class Form;
 
 class Bureaucrat
 {
 	public:
-		Bureaucrat(std::string name, int grade);
-		Bureaucrat(const Bureaucrat &copy);
+		Bureaucrat();
+		Bureaucrat(const std::string name, int grade);
+		Bureaucrat(const Bureaucrat &other);
 		~Bureaucrat();
 
 		Bureaucrat	&operator=(const Bureaucrat &other);
@@ -38,9 +42,13 @@ class Bureaucrat
 		std::string	getName() const;
 		int			getGrade() const;
 
+		void	incrementGrade();
+		void	decrementGrade();
+		void	signForm(Form &form);
+
 	private:
 		const std::string	_name;
 		int					_grade;
 };
 
-std::ostream	&operator<<(std::ostream &out, const Bureaucrat &bureaucrat);
+std::ostream	&operator<<(std::ostream &out, const Bureaucrat &context);

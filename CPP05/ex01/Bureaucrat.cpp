@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 11:50:50 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/03 10:46:35 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/07 15:22:02 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,23 @@
 //   Constructors                                                             //
 // ========================================================================== //
 
-Bureaucrat::Bureaucrat(std::string name, int grade)
+Bureaucrat::Bureaucrat()
+	:	_name("Default"), _grade(150)
+{
+
+}
+
+Bureaucrat::Bureaucrat(const std::string name, int grade)
 	:	_name(name), _grade(grade)
 {
 	if (this->_grade < 1)
-		throw (GradeTooHighException());
+		throw (Bureaucrat::GradeTooHighException());
 	else if (this->_grade > 150)
-		throw (GradeTooLowException());
+		throw (Bureaucrat::GradeTooLowException());
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &copy)
-	:	_name(copy._name), _grade(copy._grade)
+Bureaucrat::Bureaucrat(const Bureaucrat &other)
+	:	_name(other._name), _grade(other._grade)
 {
 
 }
@@ -67,7 +73,7 @@ const char	*Bureaucrat::GradeTooLowException::what() const throw()
 }
 
 // ========================================================================== //
-//   Methods & Functions                                                      //
+//   Getters & Setters                                                        //
 // ========================================================================== //
 
 std::string	Bureaucrat::getName() const
@@ -78,4 +84,36 @@ std::string	Bureaucrat::getName() const
 int			Bureaucrat::getGrade() const
 {
 	return (this->_grade);
+}
+
+// ========================================================================== //
+//   Methods & Functions                                                      //
+// ========================================================================== //
+
+void	Bureaucrat::incrementGrade()
+{
+	if (this->_grade <= 1)
+		throw (Bureaucrat::GradeTooHighException());
+	this->_grade--;
+}
+
+void	Bureaucrat::decrementGrade()
+{
+	if (this->_grade >= 150)
+		throw (Bureaucrat::GradeTooLowException());
+	this->_grade++;
+}
+
+void	Bureaucrat::signForm(Form &form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << this->_name << " signed " << form.getName() << std::endl;
+	}
+	catch(const std::exception &e)
+	{
+		std::cerr << this->_name << " couldn't sign " << form.getName() << " because: " << e.what() << std::endl;
+	}
+	
 }
