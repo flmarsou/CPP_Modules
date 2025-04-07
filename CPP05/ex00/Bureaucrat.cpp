@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 11:50:50 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/03 10:46:35 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/07 12:49:50 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,13 @@
 //   Constructors                                                             //
 // ========================================================================== //
 
-Bureaucrat::Bureaucrat(std::string name, int grade)
+Bureaucrat::Bureaucrat()
+	:	_name("Default"), _grade(150)
+{
+
+}
+
+Bureaucrat::Bureaucrat(const std::string name, int grade)
 	:	_name(name), _grade(grade)
 {
 	if (this->_grade < 1)
@@ -25,8 +31,8 @@ Bureaucrat::Bureaucrat(std::string name, int grade)
 		throw (GradeTooLowException());
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &copy)
-	:	_name(copy._name), _grade(copy._grade)
+Bureaucrat::Bureaucrat(const Bureaucrat &other)
+	:	_name(other._name), _grade(other._grade)
 {
 
 }
@@ -67,7 +73,7 @@ const char	*Bureaucrat::GradeTooLowException::what() const throw()
 }
 
 // ========================================================================== //
-//   Methods & Functions                                                      //
+//   Getters & Setters                                                        //
 // ========================================================================== //
 
 std::string	Bureaucrat::getName() const
@@ -78,4 +84,22 @@ std::string	Bureaucrat::getName() const
 int			Bureaucrat::getGrade() const
 {
 	return (this->_grade);
+}
+
+// ========================================================================== //
+//   Methods & Functions                                                      //
+// ========================================================================== //
+
+void	Bureaucrat::incrementGrade()
+{
+	if (this->_grade <= 1)
+		throw (GradeTooHighException());
+	this->_grade--;
+}
+
+void	Bureaucrat::decrementGrade()
+{
+	if (this->_grade >= 150)
+		throw (GradeTooLowException());
+	this->_grade++;
 }
