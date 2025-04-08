@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 16:19:42 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/08 14:52:09 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/08 15:18:47 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	tryPresidential(std::string name, int grade, bool sign, std::string target)
 
 		if (sign)
 			test.signForm(form);
-		form.execute(test);
+		test.executeForm(form);
 	}
 	catch(const std::exception &e)
 	{
@@ -47,7 +47,7 @@ void	tryRobotomy(std::string name, int grade, bool sign, std::string target)
 
 		if (sign)
 			test.signForm(form);
-		form.execute(test);
+		test.executeForm(form);
 	}
 	catch(const std::exception &e)
 	{
@@ -67,7 +67,7 @@ void	tryShrubbery(std::string name, int grade, bool sign, std::string target)
 
 		if (sign)
 			test.signForm(form);
-		form.execute(test);
+		test.executeForm(form);
 	}
 	catch(const std::exception &e)
 	{

@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 10:40:06 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/08 14:44:55 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/08 15:09:24 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,6 @@ void	ShrubberyCreationForm::execute(const Bureaucrat &bureaucrat) const
 		throw (AForm::IsFormSignedException());
 	if (bureaucrat.getGrade() > this->getGradeRequiredToExecute())
 		throw (Bureaucrat::GradeTooLowException());
-
-	std::cout << bureaucrat.getName() << " executed " << this->getName() << std::endl;
 
 	const std::string	fileName = this->_target + "_shrubbery";
 	std::ofstream		file;

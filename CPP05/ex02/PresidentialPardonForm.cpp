@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 14:49:34 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/08 14:50:48 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/08 15:09:14 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,5 @@ void	PresidentialPardonForm::execute(const Bureaucrat &bureaucrat) const
 	if (bureaucrat.getGrade() > this->getGradeRequiredToExecute())
 		throw (Bureaucrat::GradeTooLowException());
 
-	std::cout << bureaucrat.getName() << " executed " << this->getName() << std::endl;
 	std::cout << bureaucrat.getName() << " has been pardoned by Nanachi." << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 11:47:19 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/08 13:41:40 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/08 15:02:05 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ class Bureaucrat
 		void	incrementGrade();
 		void	decrementGrade();
 		void	signForm(AForm &form);
+		void	executeForm(const AForm &form);
 
 	private:
 		const std::string	_name;

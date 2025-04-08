@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 14:09:47 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/08 14:28:26 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/08 15:09:20 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,6 @@ void	RobotomyRequestForm::execute(const Bureaucrat &bureaucrat) const
 		throw (AForm::IsFormSignedException());
 	if (bureaucrat.getGrade() > this->getGradeRequiredToExecute())
 		throw (Bureaucrat::GradeTooLowException());
-
-	std::cout << bureaucrat.getName() << " executed " << this->getName() << std::endl;
 
 	std::srand(std::time(NULL));
 	bool	random = rand() % 2;
