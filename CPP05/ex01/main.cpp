@@ -6,17 +6,18 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 16:19:42 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/07 15:35:41 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/08 10:17:48 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 void	tryForm(const std::string name, const int gradeRequiredToSign, const int gradeRequiredToExecute)
 {
 	try
 	{
 		Form	form(name, gradeRequiredToSign, gradeRequiredToExecute);
+		std::cout << form << std::endl;
 	}
 	catch(const std::exception &e)
 	{
