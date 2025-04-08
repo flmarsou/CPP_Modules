@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:16:16 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/08 10:36:38 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/08 10:52:40 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ Form::~Form()
 
 Form			&Form::operator=(const Form &other)
 {
-	(void)other;
+	this->_signed = other._signed;
 	return (*this);
 }
 
