@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:16:16 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/08 10:32:28 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/08 10:36:38 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ int			Form::getGradeRequiredToExecute() const
 //   Methods & Functions                                                      //
 // ========================================================================== //
 
-void	Form::beSigned(Bureaucrat &bureaucrat)
+void	Form::beSigned(const Bureaucrat &bureaucrat)
 {
 	if (bureaucrat.getGrade() > this->_gradeRequiredToSign)
 		throw (Form::GradeTooLowException());

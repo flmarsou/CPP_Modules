@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 13:41:02 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/08 10:13:38 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/08 10:36:24 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ class Form
 		int			getGradeRequiredToExecute() const;
 
 		// Methods
-		void	beSigned(Bureaucrat &bureaucrat);
+		void	beSigned(const Bureaucrat &bureaucrat);
 
 	private:
 		const std::string	_name;
