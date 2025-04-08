@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 11:50:50 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/07 15:22:02 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/08 10:31:26 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,6 @@ void	Bureaucrat::signForm(Form &form)
 	try
 	{
 		form.beSigned(*this);
-		std::cout << this->_name << " signed " << form.getName() << std::endl;
 	}
 	catch(const std::exception &e)
 	{

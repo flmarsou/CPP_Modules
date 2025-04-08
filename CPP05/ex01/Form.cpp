@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:16:16 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/07 15:17:32 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/08 10:32:28 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,5 +110,11 @@ void	Form::beSigned(Bureaucrat &bureaucrat)
 {
 	if (bureaucrat.getGrade() > this->_gradeRequiredToSign)
 		throw (Form::GradeTooLowException());
+	if (this->_signed)
+	{
+		std::cout << this->_name << " is already signed by " << bureaucrat.getName() << "!" << std::endl;
+		return ;
+	}
 	this->_signed = true;
+	std::cout << bureaucrat.getName() << " signed " << this->_name << std::endl;
 }
