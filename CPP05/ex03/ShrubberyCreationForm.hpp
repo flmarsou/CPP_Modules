@@ -6,12 +6,14 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 10:23:21 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/08 13:43:37 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/09 11:40:39 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AForm.hpp"
-#include <fstream>
+#pragma once
+
+# include "AForm.hpp"
+# include <fstream>
 
 class ShrubberyCreationForm : public AForm
 {

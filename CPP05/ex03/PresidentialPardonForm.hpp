@@ -6,11 +6,13 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 14:49:01 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/08 14:49:29 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/09 11:39:40 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AForm.hpp"
+#pragma once
+
+# include "AForm.hpp"
 
 class PresidentialPardonForm : public AForm
 {

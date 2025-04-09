@@ -6,13 +6,15 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 14:09:10 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/08 14:14:29 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/09 11:40:33 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AForm.hpp"
-#include <cstdlib>
-#include <ctime>
+#pragma once
+
+# include "AForm.hpp"
+# include <cstdlib>
+# include <ctime>
 
 class RobotomyRequestForm : public AForm
 {
