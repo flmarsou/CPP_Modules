@@ -6,7 +6,7 @@
 #    By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/09 09:54:54 by flmarsou          #+#    #+#              #
-#    Updated: 2025/04/09 16:36:15 by flmarsou         ###   ########.fr        #
+#    Updated: 2025/04/10 15:01:26 by flmarsou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,8 @@ SRC			:=	main.cpp \
 				ScalarConverter.cpp \
 				convertChar.cpp \
 				convertInt.cpp \
+				convertFloat.cpp \
+				convertDouble.cpp \
 
 # Variables
 CC			:=	c++
