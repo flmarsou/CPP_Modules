@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 16:20:23 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/09 17:40:03 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/10 15:38:29 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 bool	isChar(const std::string &input)
 {
-	const long	temp = std::strtol(input.c_str(), NULL, 10);
+	char		*end;
+	const long	temp = std::strtol(input.c_str(), &end, 10);
 
 	if (input.length() <= 1)
 		return (true);
-	else if (temp == 0)
+	else if (temp == 0 || *end != '\0')
 		return (false);
-	else if (temp >= CHAR_MIN && temp <= CHAR_MAX)
+	else if (temp >= MIN_CHAR && temp <= MAX_CHAR)
 		return (true);
 	return (false);
 }
@@ -37,11 +38,16 @@ void	castToChar(const std::string &input)
 	const double	d = static_cast<double>(c);
 
 	std::cout << std::fixed << std::setprecision(1);
+
+	// Char
 	if (std::isprint(c))
 		std::cout << CHAR "'" << c << "'" << std::endl;
 	else
 		std::cout << CHAR "Non Displayable" << std::endl;
+	// Int
 	std::cout << INT << i << std::endl;
+	// Float
 	std::cout << FLOAT << f << "f" << std::endl;
+	// Double
 	std::cout << DOUBLE << d << std::endl;
 }
