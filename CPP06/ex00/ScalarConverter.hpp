@@ -38,6 +38,7 @@
 class ScalarConverter
 {
 	public:
+		// Methods
 		static void	convert(const std::string &input);
 
 	private:
