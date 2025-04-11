@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serializer.hpp                                     :+:      :+:    :+:   */
+/*   data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 15:47:03 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/11 10:30:04 by flmarsou         ###   ########.fr       */
+/*   Created: 2025/04/11 10:19:07 by flmarsou          #+#    #+#             */
+/*   Updated: 2025/04/11 11:01:16 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-# include "data.hpp"
-# include <stdint.h>
+# include <string>
 
-class Serializer
+typedef struct s_data
 {
-	public:
-		// Methods
-		static uintptr_t	serialize(t_data *ptr);
-		static t_data		*deserialize(uintptr_t raw);
-
-	private:
-		// Constructors
-		Serializer();
-		Serializer(const Serializer &other);
-		~Serializer();
-
-		// Operators
-		Serializer	&operator=(const Serializer &other);
-};
+	std::string		someString;
+	unsigned int	someNumber;
+	unsigned char	someLetter;
+}	t_data;
