@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 13:11:51 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/11 13:43:10 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/11 13:49:58 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ void	testWithFloat()
 	b = 2.4f;
 
 	std::cout << "Before Swap: a = " << a << " | b = " << b << std::endl;
-	::swap(a, b);
+	swap(a, b);
 	std::cout << "After Swap: a = " << a << " | b = " << b << std::endl;
 
-	std::cout << "min(a, b) = " << ::min(a, b) << std::endl;
-	std::cout << "max(a, b) = " << ::max(a, b) << std::endl;
+	std::cout << "min(a, b) = " << min(a, b) << std::endl;
+	std::cout << "max(a, b) = " << max(a, b) << std::endl;
 }
 
 void	testWithString()
@@ -37,11 +37,11 @@ void	testWithString()
 	b = "World";
 
 	std::cout << "Before Swap: a = " << a << " | b = " << b << std::endl;
-	::swap(a, b);
+	swap(a, b);
 	std::cout << "After Swap: a = " << a << " | b = " << b << std::endl;
 
-	std::cout << "min(a, b) = " << ::min(a, b) << std::endl;
-	std::cout << "max(a, b) = " << ::max(a, b) << std::endl;
+	std::cout << "min(a, b) = " << min(a, b) << std::endl;
+	std::cout << "max(a, b) = " << max(a, b) << std::endl;
 }
 
 void	testWithInt()
@@ -53,11 +53,11 @@ void	testWithInt()
 	b = 2;
 
 	std::cout << "Before Swap: a = " << a << " | b = " << b << std::endl;
-	::swap(a, b);
+	swap(a, b);
 	std::cout << "After Swap:  a = " << a << " | b = " << b << std::endl;
 
-	std::cout << "min(a, b) = " << ::min(a, b) << std::endl;
-	std::cout << "max(a, b) = " << ::max(a, b) << std::endl;
+	std::cout << "min(a, b) = " << min(a, b) << std::endl;
+	std::cout << "max(a, b) = " << max(a, b) << std::endl;
 }
 
 void	testWithChar()
@@ -69,11 +69,11 @@ void	testWithChar()
 	b = 'M';
 
 	std::cout << "Before Swap: a = '" << a << "' | b = '" << b << "'" << std::endl;
-	::swap(a, b);
+	swap(a, b);
 	std::cout << "After Swap: a = '" << a << "' | b = '" << b << "'" << std::endl;
 
-	std::cout << "min(a, b) = '" << ::min(a, b) << "'" << std::endl;
-	std::cout << "max(a, b) = '" << ::max(a, b) << "'" << std::endl;
+	std::cout << "min(a, b) = '" << min(a, b) << "'" << std::endl;
+	std::cout << "max(a, b) = '" << max(a, b) << "'" << std::endl;
 }
 
 int	main()
