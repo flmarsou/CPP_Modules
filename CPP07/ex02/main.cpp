@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 14:53:41 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/14 10:37:05 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/14 10:39:54 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	tryFloat()
 	std::cout << "Size of floatArray = " << arraySize << std::endl;
 	for (unsigned int i = 0; i < arraySize; i++)
 		std::cout << "floatArray[" << i << "] = " << floatArray[i] << std::endl;
-	
+
 	try
 	{
 		std::cout << floatArray[42];
@@ -48,7 +48,7 @@ void	tryString()
 	std::cout << "Size of stringArray = " << arraySize << std::endl;
 	for (unsigned int i = 0; i < arraySize; i++)
 		std::cout << "stringArray[" << i << "] = \"" << stringArray[i] << "\"" << std::endl;
-	
+
 	try
 	{
 		std::cout << stringArray[42];
@@ -71,7 +71,7 @@ void	tryInt()
 	std::cout << "Size of intArray = " << arraySize << std::endl;
 	for (unsigned int i = 0; i < arraySize; i++)
 		std::cout << "intArray[" << i << "] = " << intArray[i] << std::endl;
-	
+
 	try
 	{
 		std::cout << intArray[42];
