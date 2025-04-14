@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 14:38:24 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/11 15:15:30 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/14 10:38:05 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ Array<T>::~Array()
 // ========================================================================== //
 
 template <class T>
-Array<T>	&Array<T>::operator=(const Array<T> &other)
+Array<T>		&Array<T>::operator=(const Array<T> &other)
 {
 	delete [] this->_array;
 
@@ -59,4 +59,32 @@ Array<T>	&Array<T>::operator=(const Array<T> &other)
 	for (unsigned int i = 0; i < this->_size; i++)
 		this->_array[i] = other._array[i];
 	return (*this);
+}
+
+template <class T>
+T				&Array<T>::operator[](unsigned int index)
+{
+	if (this->_size >= index)
+		return (this->_array[index]);
+	throw (IndexOutOfBound());
+}
+
+// ========================================================================== //
+//   Exceptions                                                               //
+// ========================================================================== //
+
+template <class T>
+const char	*Array<T>::IndexOutOfBound::what() const throw()
+{
+	return ("Templete Array out of bound!");
+}
+
+// ========================================================================== //
+//   Getters                                                                  //
+// ========================================================================== //
+
+template <class T>
+unsigned int	Array<T>::getSize() const
+{
+	return (this->_size);
 }
