@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 10:43:02 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/14 12:51:37 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/14 14:52:23 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@
 # define OK	"\e[32m[ OK ]\e[0m "
 
 template <typename T>
-void	easyfind(T &item, int target);
+void	easyfind(T &container, int target);
 
 # include "easyfind.tpp"
