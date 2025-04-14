@@ -55,7 +55,7 @@ Array<T>		&Array<T>::operator=(const Array<T> &other)
 	delete [] this->_array;
 
 	this->_size = other._size;
-	this->_array = new (T[this->_size]);
+	this->_array = new T[this->_size];
 	for (unsigned int i = 0; i < this->_size; i++)
 		this->_array[i] = other._array[i];
 	return (*this);
