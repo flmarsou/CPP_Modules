@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 13:17:37 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/17 10:25:19 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/17 11:04:34 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 # include <iostream>
 # include <exception>
 # include <vector>
-# include <cmath>
+# include <ctime>
+# include <cstdlib>
 
 class Span
 {
@@ -43,6 +44,7 @@ class Span
 
 		// Methods
 		void			addNumber(int nbr);
+		void			addNumbers(std::vector<int> nbrs);
 		unsigned int	shortestSpan() const;
 		unsigned int	longestSpan() const;
 		void			displaySpan() const;

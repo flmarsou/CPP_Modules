@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 13:25:31 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/17 10:27:24 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/17 11:01:54 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,14 @@ void				Span::addNumber(int nbr)
 	if (this->_container.size() >= this->_size)
 		throw (Span::NotEnoughSpaceException());
 	this->_container.push_back(nbr);
+}
+
+void				Span::addNumbers(std::vector<int> nbrs)
+{
+	if (nbrs.size() > this->_size)
+		throw (Span::NotEnoughSpaceException());
+	for (unsigned i = 0; i < nbrs.size(); i++)
+		this->_container.push_back(nbrs[i]);
 }
 
 unsigned int		Span::shortestSpan() const
