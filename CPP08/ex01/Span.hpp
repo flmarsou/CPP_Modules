@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 13:17:37 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/14 15:06:13 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/17 10:25:19 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <iostream>
 # include <exception>
 # include <vector>
+# include <cmath>
 
 class Span
 {
@@ -31,14 +32,20 @@ class Span
 			public:
 				virtual const char	*what() const throw();
 		};
+		class NotEnoughValuesException : public std::exception
+		{
+			public:
+				virtual const char	*what() const throw();
+		};
 
 		// Operators
 		Span	&operator=(const Span &other);
 
 		// Methods
-		void	addNumber(int nbr);
-		int		shortestSpan() const;
-		int		longestSpan() const;
+		void			addNumber(int nbr);
+		unsigned int	shortestSpan() const;
+		unsigned int	longestSpan() const;
+		void			displaySpan() const;
 
 	private:
 		unsigned int		_size;
