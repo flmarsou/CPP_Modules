@@ -50,13 +50,13 @@ MutantStack<T>	&MutantStack<T>::operator=(const MutantStack &other)
 // ========================================================================== //
 
 template <class T>
-typename MutantStack<T>::iterator				MutantStack<T>::begin()
+typename MutantStack<T>::iterator	MutantStack<T>::begin()
 {
 	return (this->c.begin());
 }
 
 template <class T>
-typename MutantStack<T>::iterator				MutantStack<T>::end()
+typename MutantStack<T>::iterator	MutantStack<T>::end()
 {
 	return (this->c.end());
 }
