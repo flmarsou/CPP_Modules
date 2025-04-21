@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 16:40:21 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/18 15:47:58 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/21 14:05:15 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,25 +45,30 @@ BitcoinExchange	&BitcoinExchange::operator=(const BitcoinExchange &other)
 //   Methods & Functions                                                      //
 // ========================================================================== //
 
+// Database: Parsing & Storing
+// ---------------------------
+
 static void	throwError(const char *error, std::ifstream &file)
 {
 	file.close();
 	throw (std::runtime_error(error));
 }
 
-static bool	isValueCorrect(std::string value)
+static bool	isValueCorrect(const std::string &value)
 {
 	char			*end;
-	const float	f = std::strtof(value.c_str(), &end);
+	const double	d = std::strtod(value.c_str(), &end);
 
-	if (std::isinf(f) || *end != '\0')
+	if (std::isinf(d) || *end != '\0')
 		return (false);
-	if (f < 0)
+
+	if (d < 0)
 		return (false);
+
 	return (true);
 }
 
-static bool	isDateCorrect(std::string date)
+static bool	isDateCorrect(const std::string &date)
 {
 	const int	year = atoi(date.substr(0, 4).c_str());
 	const int	month = atoi(date.substr(5, 2).c_str());
@@ -140,10 +145,25 @@ void	BitcoinExchange::loadDB()
 			throwError(ERROR"Found duplicate in CSV file!", file);
 
 		// Store
-		this->_db[date] = std::strtof(value.c_str(), NULL);
+		this->_db[date] = std::strtod(value.c_str(), NULL);
 	}
 
 	file.close();
+}
+
+// Wallet: Parsing & Storing
+// -------------------------
+
+static void	printValue(const std::string &date, const double &value, const std::map<std::string, double> &db)
+{
+	std::map<std::string, double>::const_iterator	it;
+
+	it = db.lower_bound(date);
+
+	if (it != db.begin() && it->first > date)
+		it--;
+
+	std::cout << OK << it->first << " => " << value << " = " << value * it->second << std::endl;
 }
 
 void	BitcoinExchange::loadWallet(const char *filePath)
@@ -153,7 +173,7 @@ void	BitcoinExchange::loadWallet(const char *filePath)
 	std::string		date;
 	std::string		sep;
 	std::string		value;
-	float			f;
+	double			d;
 
 	// Opens the file
 	file.open(filePath);
@@ -171,23 +191,34 @@ void	BitcoinExchange::loadWallet(const char *filePath)
 		// Date
 		date = line.substr(0, 10);
 		if (date.size() < 10 || !isDateCorrect(date))
-			throwError(ERROR"Wrong date syntax in Wallet file!", file);
+		{
+			std::cerr << KO "Bad date input => " << date << std::endl;
+			continue ;
+		}
 
 		// Separator
 		sep = line.substr(10, 3);
 		if (sep != " | ")
-			throwError(ERROR"Wrong separator syntax in Wallet file!", file);
+		{
+			std::cerr << KO "Bad seperator input => \"" << sep << "\"" << std::endl;
+			continue ;
+		}
 
 		// Value (0-1000)
 		value = line.substr(13);
 		if (value.empty() || !isValueCorrect(value))
-			throwError(ERROR"Wrong value syntax in Wallet file!", file);
-		f = std::strtof(value.c_str(), NULL);
-		if (f > 1000)
-			throwError(ERROR"Value out of range in Wallet file!", file);
+		{
+			std::cerr << KO "Bad value input => " << value << std::endl;
+			continue ;
+		}
+		d = std::strtod(value.c_str(), NULL);
+		if (d > 1000)
+		{
+			std::cerr << KO "Value is too large => " << value << std::endl;
+			continue ;
+		}
 
-		// Store
-		this->_wallet[date] = f;
+		printValue(date, d, this->_db);
 	}
 
 	file.close();
