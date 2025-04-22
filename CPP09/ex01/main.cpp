@@ -6,13 +6,13 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 15:01:31 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/22 10:57:39 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/22 13:47:05 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RPN.hpp"
 
-int	main(int argc, char **argv)
+int	main(int argc, const char **argv)
 {
 	RPN	rpn;
 

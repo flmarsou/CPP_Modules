@@ -6,13 +6,13 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 16:29:32 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/18 15:49:42 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/22 13:47:01 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
 
-int	main(int argc, char **argv)
+int	main(int argc, const char **argv)
 {
 	BitcoinExchange	bitCoinExchange;
 
