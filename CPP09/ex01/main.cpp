@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 15:01:31 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/21 16:09:17 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/22 10:57:39 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(int argc, char **argv)
 {
 	RPN	rpn;
 
-	if (argc != 2)
+	if (argc != 2 || !argv[1][0])
 	{
 		std::cerr << ERROR "Usage: ./RPN \"...\"" << std::endl;
 		return (-1);
