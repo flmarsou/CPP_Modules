@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 16:34:27 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/21 14:03:22 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/22 15:15:52 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class BitcoinExchange
 		BitcoinExchange	&operator=(const BitcoinExchange &other);
 
 		void	loadDB();
-		void	loadWallet(const char *filePath);
+		void	loadWallet(const char *filePath) const;
 
 	private:
 		std::map<std::string, double>	_db;

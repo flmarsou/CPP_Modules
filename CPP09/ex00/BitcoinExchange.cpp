@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 16:40:21 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/21 14:05:15 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/22 15:15:57 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,7 +166,7 @@ static void	printValue(const std::string &date, const double &value, const std::
 	std::cout << OK << it->first << " => " << value << " = " << value * it->second << std::endl;
 }
 
-void	BitcoinExchange::loadWallet(const char *filePath)
+void	BitcoinExchange::loadWallet(const char *filePath) const
 {
 	std::ifstream	file;
 	std::string		line;
