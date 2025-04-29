@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 14:38:24 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/14 10:38:05 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/29 10:26:36 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,14 @@ Array<T>		&Array<T>::operator=(const Array<T> &other)
 
 template <class T>
 T				&Array<T>::operator[](unsigned int index)
+{
+	if (this->_size >= index)
+		return (this->_array[index]);
+	throw (IndexOutOfBound());
+}
+
+template <class T>
+const T			&Array<T>::operator[](unsigned int index) const
 {
 	if (this->_size >= index)
 		return (this->_array[index]);

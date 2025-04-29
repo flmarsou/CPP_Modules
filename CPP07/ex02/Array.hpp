@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 14:35:22 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/14 10:38:01 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/04/29 10:26:22 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class Array
 		// Operators
 		Array	&operator=(const Array<T> &other);
 		T		&operator[](unsigned int index);
+		const T	&operator[](unsigned int index) const;
 
 		// Getters
 		unsigned int	getSize() const;
