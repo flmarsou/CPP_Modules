@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 13:48:25 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/22 15:17:39 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/05/23 14:41:11 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 # include <iostream>
 # include <ctime>
 # include <cstdlib>
+# include <cstring>
+# include <iomanip>
 # include <vector>
+# include <deque>
 
 # define ERROR	"\e[31m[ ERROR ] - \e[0m"
 
@@ -28,9 +31,12 @@ class PmergeMe
 
 		PmergeMe	&operator=(const PmergeMe &other);
 
-		void	performParser(const char **argv);
-		void	performMerge(const char **argv);
+		void	parser(const char **argv, std::vector<unsigned int> &unsortedVector, std::deque<unsigned int> &unsortedDeque);
 
-	private:
-		std::vector<int>	_vec;
+		template <typename T>
+		void	displayNumbers(T &container);
+
+		void	sortVector(std::vector<unsigned int> &unsortedVector);
 };
+
+# include "PmergeMe.tpp"
