@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 13:48:25 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/05/23 14:41:11 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/06/10 11:46:22 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <cstdlib>
 # include <cstring>
 # include <iomanip>
+# include <algorithm>
 # include <vector>
 # include <deque>
 
