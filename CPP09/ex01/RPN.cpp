@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 15:19:49 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/22 12:24:45 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/06/10 11:18:36 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,8 +140,8 @@ static bool	parseRPN(const std::string &input)
 
 void	RPN::executeRPN(const std::string &input)
 {
-	int	a;
-	int	b;
+	long	a;
+	long	b;
 
 	if (!parseInput(input) || !parseStart(input) || !parseRPN(input))
 		return ;
@@ -162,11 +162,23 @@ void	RPN::executeRPN(const std::string &input)
 
 			// Performs the operation.
 			if (input[i] == '+')
+			{
+				if (b + a > 2147483647 || b + a < -2147483648)
+					throw (std::runtime_error(ERROR"Overflow!"));
 				this->_stack.push(b + a);
+			}
 			else if (input[i] == '-')
+			{
+				if (b - a > 2147483647 || b + a < -2147483648)
+					throw (std::runtime_error(ERROR"Overflow!"));
 				this->_stack.push(b - a);
+			}
 			else if (input[i] == '*')
+			{
+				if (b * a > 2147483647 || b + a < -2147483648)
+					throw (std::runtime_error(ERROR"Overflow!"));
 				this->_stack.push(b * a);
+			}
 			else
 			{
 				if (a == 0 || b == 0)
@@ -174,6 +186,8 @@ void	RPN::executeRPN(const std::string &input)
 					std::cerr << ERROR "Division by 0!" << std::endl;
 					return ;
 				}
+				if (b / a > 2147483647 || b / a < -2147483648)
+					throw (std::runtime_error(ERROR"Overflow!"));
 				this->_stack.push(b / a);
 			}
 		}

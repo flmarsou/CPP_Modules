@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 15:01:51 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/04/22 12:26:03 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/06/10 11:13:51 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ class RPN
 		void	executeRPN(const std::string &input);
 
 	private:
-		std::stack<int>	_stack;
+		std::stack<long>	_stack;
 };

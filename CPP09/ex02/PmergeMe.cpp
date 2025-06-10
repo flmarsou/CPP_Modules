@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 13:48:57 by flmarsou          #+#    #+#             */
-/*   Updated: 2025/05/23 15:21:56 by flmarsou         ###   ########.fr       */
+/*   Updated: 2025/06/10 10:31:08 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,14 @@ void	PmergeMe::parser(const char **argv, std::vector<unsigned int> &vector, std:
 	}
 }
 
-static unsigned int					jacobsthalSequence(unsigned int n)
+static std::vector<unsigned int>	generateJacobsthalSequence(unsigned int n)
 {
+	std::vector<unsigned int>	jacobsthalSequence;
 	if (n == 0)
-		return (0);
+	{
+
+		return (jacobsthalSequence);
+	}
 
 	if (n == 1)
 		return (1);
@@ -118,6 +122,7 @@ static std::vector<unsigned int>	fordJohnsonSort(const std::vector<unsigned int>
 	std::vector<unsigned int>	sorted = fordJohnsonSort(bigNumbers);
 
 	// 3. Jacobsthal
+	std::vector<unsigned int>	jacobsthalSequence = 
 
 	return (sorted);
 }
@@ -128,7 +133,8 @@ void	PmergeMe::sortVector(std::vector<unsigned int> &vector)
 
 	vector = fordJohnsonSort(vector);
 
-	const double	duration = (clock() - start) / (double)CLOCKS_PER_SEC;
+	const double	duration = (clock() - start) / double(CLOCKS_PER_SEC);
 
+	std::cout << std::fixed << std::setprecision(6);
 	std::cout << "\nSort time with Vectors: " << duration << "s" << std::endl;
 }
